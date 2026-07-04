@@ -1,0 +1,141 @@
+:root {
+    --jms-green: #2e7d32;
+    --jms-green-dark: #1b5e20;
+    --jms-lime: #aed581;
+    --jms-orange: #ff8f00;
+    --jms-bg: #f6faf4;
+}
+
+body {
+    background-color: var(--jms-bg);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: #26302a;
+}
+
+.jms-navbar {
+    background: linear-gradient(90deg, var(--jms-green-dark), var(--jms-green));
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+}
+
+.jms-footer {
+    background: #eef3ec;
+    border-top: 1px solid #dbe6d6;
+}
+
+/* ---- Hero ---- */
+.jms-hero {
+    background: linear-gradient(120deg, var(--jms-green), var(--jms-lime));
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ---- Product cards ---- */
+.product-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+}
+
+.product-thumb {
+    height: 150px;
+    background: linear-gradient(135deg, var(--jms-lime), #dcedc8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: var(--jms-green-dark);
+}
+
+.price-tag {
+    color: var(--jms-green-dark);
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.btn-jms {
+    background: var(--jms-green);
+    border-color: var(--jms-green);
+    color: #fff;
+}
+.btn-jms:hover { background: var(--jms-green-dark); color: #fff; }
+
+/* ---- Kitchen display ---- */
+.ticket {
+    border-left: 6px solid var(--jms-orange);
+    border-radius: .5rem;
+}
+.ticket.status-Preparing { border-left-color: #0d6efd; }
+.ticket.status-Served    { border-left-color: var(--jms-green); opacity: .7; }
+
+/* ---- Order status tracker (customer My Orders) ---- */
+.order-tracker {
+    align-items: flex-start;
+    gap: .25rem;
+}
+.tracker-step {
+    flex: 0 0 auto;
+    width: 4.5rem;
+}
+.tracker-dot {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0 auto .25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+    color: #adb5bd;
+    border: 2px solid #dee2e6;
+    transition: all .2s ease;
+}
+.tracker-label { color: #adb5bd; }
+.tracker-done .tracker-dot {
+    background: var(--jms-green);
+    border-color: var(--jms-green);
+    color: #fff;
+}
+.tracker-done .tracker-label { color: var(--jms-green-dark); }
+.tracker-active .tracker-dot {
+    background: var(--jms-orange);
+    border-color: var(--jms-orange);
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 143, 0, .18);
+}
+.tracker-active .tracker-label { color: var(--jms-orange); font-weight: 600; }
+.tracker-bar {
+    flex: 1 1 auto;
+    height: 3px;
+    background: #dee2e6;
+    margin-top: 1.05rem;
+    border-radius: 3px;
+}
+.tracker-bar.tracker-done { background: var(--jms-green); }
+
+/* ---- Kitchen wait-time pill ---- */
+.wait-pill { font-variant-numeric: tabular-nums; }
+.ticket.wait-urgent { border-left-color: #dc3545 !important; }
+
+/* ---- Misc ---- */
+.stat-card { border-radius: 1rem; border: none; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.low-stock { background: #fff3cd !important; }
+.out-stock { background: #f8d7da !important; }
+.customization-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: var(--jms-green-dark);
+    border-radius: 999px;
+    padding: .1rem .6rem;
+    font-size: .75rem;
+    margin: .1rem;
+}

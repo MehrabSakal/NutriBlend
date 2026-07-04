@@ -1,0 +1,12 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# PHP
+vendor/
+*.log
+
+# Local config overrides (keep the committed default config/db.php)
+config/db.local.php
